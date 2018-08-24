@@ -1,0 +1,34 @@
+<view style='background-color:#f5f5f5;'>
+  <view class='topmenu'>
+    <view class='topmenuitem' style='border-style: solid;border-width: 0 0.6rpx 0 0;border-color: #e4e5e6;'>
+      <text class='topmenutext'>美国</text>
+      <image class='topmenuarrow' src='/image/ic_arrow_down_gray.png' />
+    </view>
+    <view class='topmenuitem' style='border-style: solid;border-width: 0 0.6rpx 0 0;border-color: #e4e5e6;'>
+      <text class='topmenutext'>综合排名</text>
+      <image class='topmenuarrow' src='/image/ic_arrow_down_gray.png' />
+    </view>
+    <view class='topmenuitem' style='border-style: solid;border-width: 0 0 0 0;border-color: #e4e5e6;'>
+      <text class='topmenutext'>更多筛选</text>
+      <image class='topmenuarrow' src='/image/ic_arrow_down_gray.png' />
+    </view>
+  </view>
+  <view style='  width: 100%;height: 80rpx;' />
+  <block class='' wx:for="{{schoollist}}" wx:for-index="index" wx:key="{{item.id}}">
+    <navigator class='schoolitem' url='/pages/webview/webview?url=/school/{{item.id}}.html&title={{item.chineseName}}'>
+      <view class='schoolitemlogo'>
+        <image class='logoimage' src='{{item.logo}}' />
+      </view>
+      <view style='display: flex; flex-direction: column'>
+        <text style="font-size: 1rem;color: #26343F;">{{item.chineseName}}</text>
+        <text style="font-size: 0.8rem;color: #949ba1;">{{item.englishName}}</text>
+        <text style="font-size: 0.9rem;color: #949ba1;">{{item.cityPath}}</text>
+        <text style="font-size: 0.9rem;color: #26343F;margin-top:11rpx;">录取率：{{item.TIE_ADMINSSION_RATE}}</text>
+      </view>
+    </navigator>
+    <view wx:if="{{index != schoollist.length - 1}}" class='horizontal-line' />
+    <view style='width:100%;text-align: center;' wx:if="{{index == schoollist.length - 1}}">
+      <text class='load-more-font'>{{loadTxt}}</text>
+    </view>
+  </block>
+</view>

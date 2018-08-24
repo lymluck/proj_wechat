@@ -1,0 +1,58 @@
+@import "../../common/wxgrid.wxss";
+
+.topitem {
+  width: 130rpx;
+  display: flex;
+  margin-top: 56rpx;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.topitemimage {
+  height: 100rpx;
+  width: 100rpx;
+  align-content: center;
+  align-self: center;
+}
+
+.topitemtext {
+  width: 112rpx;
+  font-size: 0.7rem;
+  text-align: center;
+  margin-top: 12rpx;
+  color: #58646e;
+}
+
+.griditem {
+  display: flex;
+  flex-direction: column;
+  padding: 5rpx 30rpx 30rpx 30rpx;
+}
+
+.griditemtypename {
+  font-size: 1rem;
+  color: #26343f;
+}
+
+.griditemtag {
+  display: flex;
+  background-color: #f5f6f7;
+  border-radius: 32rpx;
+  margin-top: 23rpx;
+  align-items: center;
+  justify-content: center;
+  height: 70rpx;
+  text-overflow: ellipsis;
+}
+
+.griditemtagtext {
+  font-size: 0.8rem;
+  color: #26343f;
+  display: block; /*内联对象需加*/
+  word-break: keep-all; /* 不换行 */
+  white-space: nowrap; /* 不换行 */
+  overflow: hidden; /* 内容超出宽度时隐藏超出部分的内容 */
+  text-overflow: ellipsis;
+  padding: 10rpx;
+}

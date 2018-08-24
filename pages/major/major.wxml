@@ -1,0 +1,61 @@
+<view class='horizontal-line' />
+<view style='display:flex; flex-direction: column;'>
+  <view style='display:flex; flex-direction: row;'>
+    <view class='topitem' style='margin-left:{{itemGap}}px;'>
+      <image class='topitemimage' src='../../image/ic_major_global.png' />
+      <text class='topitemtext'>全球专业排名</text>
+    </view>
+    <view class='topitem' style='margin-left:{{doubleItemGap}}px;'>
+      <image class='topitemimage' src='../../image/ic_major_us.png' />
+      <text class='topitemtext'>美国专业排名</text>
+    </view>
+    <view class='topitem' style='margin-left:{{doubleItemGap}}px;'>
+      <image class='topitemimage' src='../../image/ic_major_us.png' />
+      <text class='topitemtext' style='width:130rpx;'>美国研究生专业排名</text>
+    </view>
+    <view class='topitem' style='margin-left:{{doubleItemGap}}px; margin-right:{{itemGap}}px'>
+      <image class='topitemimage' style='height:113rpx;margin-top:-12rpx;' src='../../image/ic_major_art.png' />
+      <text class='topitemtext'>艺术专业排名</text>
+    </view>
+  </view>
+  <view style='display:flex;flex-direction: row;'>
+    <view class='horizontal-line' style='margin:40rpx;' />
+    <view style='width:0rpx;' />
+  </view>
+  <block class='' wx:for="{{majorlist}}" wx:for-index="index" wx:for-key="id">
+    <view class='griditem'>
+      <view style='display:flex; flex-direction: row; align-content:center;margin-bottom: 18rpx;'>
+        <text style='font-size:1.1rem; color:#26343f; flex:1;align-content:center;align-self:center;'>{{item.name}}</text>
+        <view style='align-content:center;align-self:center;'>
+          <text style='font-size: 0.8rem;color: #949ba1;margin-right:10rpx;'>查看更多</text>
+          <image style='height:23rpx;width:16rpx;' src='../../image/ic_home_arrow_rg.png' />
+        </view>
+      </view>
+      <view>
+        <view style='display:flex;flex-flow:row wrap;'>
+          <view wx:for="{{item.majors}}" wx:for-index="idx" wx:for-item="major" wx:for-key="id">
+            <block wx:if="{{idx % 3 == 0}}">
+              <view class='griditemtag' style='width:{{tagW}}px;margin-right:10rpx;'>
+                <text class='griditemtagtext'>{{major.name}}</text>
+              </view>
+            </block>
+            <block wx:elif="{{idx % 3 == 1}}">
+              <view class='griditemtag' style='width:{{tagW}}px;margin-right:10rpx;margin-left:10rpx;'>
+                <text class='griditemtagtext'>{{major.name}}</text>
+              </view>
+            </block>
+            <block wx:else>
+              <view class='griditemtag' style='width:{{tagW}}px;margin-left:10rpx;'>
+                <text class='griditemtagtext'>{{major.name}}</text>
+              </view>
+            </block>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view style='display:flex;flex-direction: row;' wx:if="{{index != majorlist.length - 1}}">
+      <view class='horizontal-line' style='margin:10rpx 40rpx 40rpx 40rpx' />
+      <view style='width:0rpx;' />
+    </view>
+  </block>
+</view>

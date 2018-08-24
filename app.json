@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/school/school",
+    "pages/major/major",
+    "pages/news/news",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/webview/webview"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f5f5f5"
+  },
+  "tabBar": {
+    "backgroundColor": "white",
+    "color": "#999999",
+    "selectedColor": "#078CF1",
+    "list": [
+      {
+        "pagePath": "pages/school/school",
+        "text": "院校",
+        "iconPath": "image/tab_school_normal.png",
+        "selectedIconPath": "image/tab_school_selected.png"
+      },
+      {
+        "pagePath": "pages/major/major",
+        "text": "专业",
+        "iconPath": "image/tab_news_normal.png",
+        "selectedIconPath": "image/tab_news_selected.png"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "text": "资讯",
+        "iconPath": "image/tab_qa_normal.png",
+        "selectedIconPath": "image/tab_qa_selected.png"
+      }
+    ]
+  }
+}

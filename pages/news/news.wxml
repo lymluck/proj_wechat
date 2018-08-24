@@ -1,0 +1,24 @@
+<view style='background-color:#f5f5f5;'>
+  <view class='horizontal-line' />
+  <view wx:for="{{newslist}}" wx:for-index="index" wx:for-key="id" class='newsitem'>
+    <view class='newsitemcontent'>
+      <view class='newsitemtitletag'>
+        <text class='newsitemtitle'>{{item.title}}</text>
+        <view class='newsitemtagcount'>
+          <block wx:for="{{item.tags}}" wx:for-item="tag" wx:for-key="id">
+            <block wx:if="{{tag.type === 'stage'}}">
+              <text class='newsitemtag'>{{tag.name}}</text>
+            </block>
+          </block>
+          <image style='width:20rpx;height:15rpx;align-self: center;' src='../../image/ic_see.png' />
+          <text class='newsitemcount'>{{item.visitCount}}人浏览</text>
+        </view>
+      </view>
+      <image class='newsitemimg' src='{{item.coverUrl}}' />
+    </view>
+    <view wx:if="{{index != newslist.length - 1}}" class='horizontal-line' style='margin-left:30rpx;' />
+    <view style='width:100%;text-align: center;' wx:if="{{index == newslist.length - 1}}">
+      <text class='load-more-font'>{{loadTxt}}</text>
+    </view>
+  </view>
+</view>
