@@ -7,10 +7,12 @@
         <view class='newsitemtagcount'>
           <block wx:for="{{item.tags}}" wx:for-item="tag" wx:for-key="id">
             <block wx:if="{{tag.type === 'stage'}}">
-              <text class='newsitemtag'>{{tag.name}}</text>
+              <view class='newsitemtagview'>
+                <text style='font-size: 0.55rem;color: #078cf1;'>{{tag.name}}</text>
+              </view>
             </block>
           </block>
-          <image style='width:20rpx;height:15rpx;align-self: center;' src='../../image/ic_see.png' />
+          <image class='newsitemsee' src='../../image/ic_see.png' />
           <text class='newsitemcount'>{{item.visitCount}}人浏览</text>
         </view>
       </view>

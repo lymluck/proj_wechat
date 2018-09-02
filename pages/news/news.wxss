@@ -33,20 +33,25 @@
   flex-direction: row;
   vertical-align: text-bottom;
   margin-top: 25rpx;
-  align-content: center;
+  align-items: flex-end;
   flex: 1;
 }
 
-.newsitemtag {
+.newsitemtagview {
+  display: flex;
   height: 18rpx;
-  font-size: 0.55rem;
-  color: #078cf1;
-  border-width: thin;
   border-radius: 32rpx;
-  border-color: #078cf1;
-  padding: 10rpx 15rpx 10rpx 15rpx;
-  border: solid;
+  padding: 8rpx 12rpx 8rpx 12rpx;
+  border: 1rpx solid #078cf1;
   margin-right: 18rpx;
+  align-items: center;
+}
+
+.newsitemsee {
+  width: 20rpx;
+  height: 15rpx;
+  align-self: flex-end;
+  margin-bottom: 10rpx;
 }
 
 .newsitemcount {
